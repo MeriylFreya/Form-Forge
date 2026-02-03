@@ -1,0 +1,202 @@
+/**
+ * PdfEditor Page Styles
+ */
+
+.pdf-editor {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 70px);
+  background: var(--color-fog);
+}
+
+/* Upload Screen */
+.upload-screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2xl);
+}
+
+.upload-card {
+  background: white;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  border: 2px solid var(--color-border);
+  animation: fadeIn 0.5s ease;
+}
+
+.upload-icon {
+  font-size: 5rem;
+  margin-bottom: var(--spacing-lg);
+  filter: grayscale(0.3);
+}
+
+.upload-card h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+.upload-card p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.5;
+}
+
+.upload-btn {
+  font-size: 1.1rem;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.upload-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--color-sage);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Editor Layout */
+.editor-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.toolbar {
+  background: white;
+  border-bottom: 2px solid var(--color-border);
+  padding: var(--spacing-md) var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.toolbar-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.page-navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  background: var(--color-surface);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.page-navigation button {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  min-width: 32px;
+  font-size: 1.2rem;
+}
+
+.page-info {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.field-count {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .editor-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .upload-screen {
+    padding: var(--spacing-md);
+  }
+  
+  .upload-card {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+  
+  .upload-icon {
+    font-size: 4rem;
+  }
+  
+  .upload-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .upload-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .toolbar {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .toolbar-section {
+    flex-wrap: wrap;
+  }
+  
+  .toolbar-btn {
+    font-size: 0.85rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .editor-content {
+    flex-direction: column;
+  }
+}
